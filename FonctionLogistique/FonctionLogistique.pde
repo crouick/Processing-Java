@@ -1,17 +1,13 @@
-private final color BG_COLOR = color(25, 25, 25);
-private final Integer SIZE_I = 1800;
-private final Integer SIZE_J = 1200;
-
-private Application app;
-//private Double k = (double) 4.0;
+private final color BG_COLOR = color(0, 0, 0); // couleur du fond de la fenêtre
+private final Integer SIZE_I = 1800; // taille horizontale de la fenêtre en pixels
+private final Integer SIZE_J = 1200; // taille verticale de la fenêtre en pixels
+private Application app; // objet Application
 
 public void settings() {
- size(SIZE_I, SIZE_J); // , P2D
- app = new Application(SIZE_I, SIZE_J);
+ app = new Application(SIZE_I, SIZE_J, BG_COLOR);
  app.init();
 }
 
 public void draw() {
- background(BG_COLOR); 
  app.run();
 }
